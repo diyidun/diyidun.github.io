@@ -7,7 +7,7 @@ export default function Home() {
       {/* Top */}
       <header className="mx-auto max-w-6xl px-6 py-14">
         <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl order-2 md:order-1 mt-4 md:mt-0">
             <p className="text-base font-semibold text-zinc-900">
               Milton Diaz{" "}
               <span className="font-normal text-zinc-500">(Li Yi Dun)</span>
@@ -68,8 +68,8 @@ export default function Home() {
           </div>
 
           {/* Photo */}
-          <div className="shrink-0">
-            <div className="relative h-48 w-48 overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-md md:h-56 md:w-56">
+          <div className="shrink-0 order-1 md:order-2">
+            <div className="relative aspect-square overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-200 w-40 sm:w-48 md:w-64 mx-auto mb-6 md:mb-0">
               {/* Put your photo at: public/me.jpg */}
               <Image
                 src="/me.jpeg"
