@@ -1,65 +1,195 @@
 import Image from "next/image";
+import { projects } from "./data/projects";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-[#f5f5f7] text-zinc-900">
+      {/* Top */}
+      <header className="mx-auto max-w-6xl px-6 py-14">
+        <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-base font-semibold text-zinc-900">
+              Milton Diaz{" "}
+              <span className="font-normal text-zinc-500">(Li Yi Dun)</span>
+            </p>
+            <h1 className="mt-3 text-5xl font-bold tracking-tighter md:text-6xl">
+              Full-Stack Web Developer
+            </h1>
+            <p className="mt-4 text-lg text-zinc-600">
+              I build SaaS platforms and business systems with React, Node.js,
+              and MySQL — including multi-tenant architecture, role-based
+              access, audit logs, and subscription billing.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                className="rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+              >
+                View Projects
+              </a>
+              <a
+                href="https://github.com/diyidun"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/milton-diaz-li-yi-dun-583597142"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50"
+              >
+                LinkedIn
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-2 text-xs text-zinc-500">
+              {[
+                "React",
+                "Tailwind",
+                "Node.js",
+                "Express",
+                "MySQL",
+                "REST APIs",
+                "PayPal",
+                "Linux / Nginx",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-zinc-200 bg-white px-3 py-1 text-zinc-700"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Photo */}
+          <div className="shrink-0">
+            <div className="relative h-48 w-48 overflow-hidden rounded-3xl border border-zinc-200 bg-white shadow-md md:h-56 md:w-56">
+              {/* Put your photo at: public/me.jpg */}
+              <Image
+                src="/me.jpeg"
+                alt="Milton Diaz"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <p className="mt-4 text-center text-sm text-zinc-600">
+              Based in Taiwan • Open to remote roles
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Projects */}
+      <section id="projects" className="mx-auto max-w-6xl px-6 pb-16">
+        <h2 className="text-2xl font-semibold">Featured Projects</h2>
+        <p className="mt-2 text-zinc-500">
+          Real systems deployed online — SaaS platform + production business
+          CMS.
+        </p>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {projects.map((p) => (
+            <article
+              key={p.title}
+              className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+            >
+              <h3 className="text-xl font-semibold">{p.title}</h3>
+              <p className="mt-1 text-sm text-zinc-500">{p.subtitle}</p>
+              <p className="mt-4 text-zinc-600">{p.description}</p>
+
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-zinc-600">
+                {p.highlights.map((h) => (
+                  <li key={h}>{h}</li>
+                ))}
+              </ul>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {p.stack.map((s) => (
+                  <span
+                    key={s}
+                    className="rounded-full bg-zinc-100 px-3 py-1 text-xs text-zinc-700"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href={p.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+                >
+                  Live
+                </a>
+
+                {p.githubShowcaseUrl && (
+                  <a
+                    href={p.githubShowcaseUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50"
+                  >
+                    Case Study
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* About + Contact */}
+      <section className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="grid gap-10 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-semibold">About</h2>
+            <p className="mt-3 text-zinc-600">
+              I build practical business software: dashboards, workflows,
+              multi-tenant systems, and integrations. I focus on reliability,
+              clear UX, and real operational needs.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-semibold">Contact</h2>
+            <p className="mt-3 text-zinc-600">Best way to reach me:</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a
+                href="https://www.linkedin.com/in/milton-diaz-li-yi-dun-583597142"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/diyidun"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:border-zinc-300 hover:bg-zinc-50"
+              >
+                GitHub
+              </a>
+              {/* If you want, replace with your email */}
+              {/* <a href="mailto:you@example.com" className="..." /> */}
+            </div>
+          </div>
+        </div>
+
+        <footer className="mt-16 border-t border-zinc-200 pt-8 text-sm text-zinc-500">
+          © {new Date().getFullYear()} Milton Diaz • Built with Next.js +
+          Tailwind
+        </footer>
+      </section>
+    </main>
   );
 }
