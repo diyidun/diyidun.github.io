@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Milton Diaz (Li Yi Dun) | Full-Stack Web Developer",
   description:
-    "Full-stack developer building SaaS platforms, CMS systems, and business software using React, Node.js, and MySQL.",
+    "Full-stack developer building SaaS platforms, CMS systems, and business software with React, Node.js, Express, MySQL, and Tailwind CSS.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -44,14 +44,18 @@ export default function RootLayout({
                 "React",
                 "Tailwind CSS",
                 "JavaScript",
+                "TypeScript",
+                "Next.js",
                 "Node.js",
                 "Express.js",
                 "MySQL",
                 "REST APIs",
                 "SaaS Development",
                 "Multi-tenant Architecture",
+                "Role-based Access Control",
                 "PayPal Integration",
-                "Nginx",
+                "Internationalization",
+                "SEO",
                 "Linux Server Deployment",
               ],
               sameAs: [

@@ -10,18 +10,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Studio Management System",
-    subtitle: "Multi-tenant SaaS/ERP platform (Full-Stack Web App)",
+    title: "YKA Academy Management System",
+    subtitle: "Multi-tenant SaaS platform for academy and studio management",
     description:
-      "A multi-branch management platform that centralizes student records, scheduling, financial transactions, reporting, and PayPal subscription billing.",
+      "YKA is a multi-tenant SaaS platform for academies, dance studios, cram schools, language schools, music schools, tutoring centers, and training organizations. It helps manage student records, enrollment, schedules, payments, reports, staff access, branches, and operational workflows in one centralized system.",
     highlights: [
-      "Multi-tenant data isolation + role-based access control",
-      "Audit logs for accountability and activity history",
-      "Billing + subscription workflow with PayPal (webhooks)",
-      "Dashboards for revenue, new registrations, and unpaid students",
+      "Multi-tenant organization architecture with role-based access control",
+      "Student, enrollment, course, schedule, branch, and staff management workflows",
+      "Payment tracking, manual payment requests, PayPal subscription billing, and admin notifications",
+      "Reports for student rosters, financial activity, withdrawals, and estimated revenue loss",
+      "Multilingual public homepage with SEO-friendly language routes, sitemap, canonical, and hreflang support",
+      "Public contact form with email and LINE contact options",
     ],
-    stack: ["React", "Tailwind", "Node.js", "Express", "MySQL", "PayPal"],
-    liveUrl: "https://studio-management-sys-production.up.railway.app",
+    stack: ["React", "Tailwind", "Node.js", "Express", "MySQL", "PayPal", "i18n", "SEO"],
+    liveUrl: "https://ykasys.com",
     githubShowcaseUrl:
       "https://github.com/diyidun/studio-management-saas-showcase",
   },

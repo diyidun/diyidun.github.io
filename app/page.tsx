@@ -18,7 +18,7 @@ export default function Home() {
             <p className="mt-4 text-lg text-zinc-600">
               I build SaaS platforms and business systems with React, Node.js,
               and MySQL — including multi-tenant architecture, role-based
-              access, audit logs, and subscription billing.
+              access, payments, analytics, and SEO-ready public pages.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
